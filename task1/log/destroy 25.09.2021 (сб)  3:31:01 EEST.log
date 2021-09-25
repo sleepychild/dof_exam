@@ -1,0 +1,7 @@
+==> main: Forcing shutdown of VM...
+==> main: Destroying VM and associated drives...
+# Host [localhost]:2222 found: line 62
+/home/mario/.ssh/known_hosts updated.
+Original contents retained as /home/mario/.ssh/known_hosts.old
+Host [localhost]:2200 not found in /home/mario/.ssh/known_hosts
+Host [localhost]:2201 not found in /home/mario/.ssh/known_hosts

@@ -1,0 +1,1335 @@
+Bringing machine 'main' up with 'virtualbox' provider...
+==> main: Importing base box 'ubuntu/focal64'...
+[KProgress: 90%[K==> main: Matching MAC address for NAT networking...
+==> main: Checking if box 'ubuntu/focal64' version '20210921.0.0' is up to date...
+==> main: Setting the name of the VM: task1_main_1632529351380_45754
+==> main: Clearing any previously set network interfaces...
+==> main: Preparing network interfaces based on configuration...
+    main: Adapter 1: nat
+    main: Adapter 2: hostonly
+    main: Adapter 3: bridged
+==> main: Forwarding ports...
+    main: 2375 (guest) => 2375 (host) (adapter 1)
+    main: 5000 (guest) => 5000 (host) (adapter 1)
+    main: 9000 (guest) => 9000 (host) (adapter 1)
+    main: 9200 (guest) => 9200 (host) (adapter 1)
+    main: 5044 (guest) => 5044 (host) (adapter 1)
+    main: 5601 (guest) => 5601 (host) (adapter 1)
+    main: 8080 (guest) => 8080 (host) (adapter 1)
+    main: 22 (guest) => 2222 (host) (adapter 1)
+==> main: Running 'pre-boot' VM customizations...
+==> main: Booting VM...
+==> main: Waiting for machine to boot. This may take a few minutes...
+    main: SSH address: 127.0.0.1:2222
+    main: SSH username: vagrant
+    main: SSH auth method: private key
+    main: Warning: Connection reset. Retrying...
+    main: Warning: Remote connection disconnect. Retrying...
+==> main: Machine booted and ready!
+==> main: Checking for guest additions in VM...
+==> main: Setting hostname...
+==> main: Configuring and enabling network interfaces...
+==> main: Mounting shared folders...
+    main: /sync => /home/mario/dof_exam/task1/sync
+    main: /vagrant => /home/mario/dof_exam/task1
+==> main: Running provisioner: shell...
+    main: Running: /tmp/vagrant-shell20210925-42944-8af5rk.sh
+==> main: Running provisioner: shell...
+    main: Running: /tmp/vagrant-shell20210925-42944-1dfhoky.sh
+==> main: Running provisioner: shell...
+    main: Running: /tmp/vagrant-shell20210925-42944-85gpxm.sh
+    main: Synchronizing state of ufw.service with SysV service script with /lib/systemd/systemd-sysv-install.
+    main: Executing: /lib/systemd/systemd-sysv-install disable ufw
+    main: Removed /etc/systemd/system/multi-user.target.wants/ufw.service.
+==> main: Running provisioner: salt...
+Copying salt minion config to vm.
+Copying salt master config to vm.
+Uploading minion keys.
+Uploading master keys.
+Checking if salt-minion is installed
+salt-minion was not found.
+Checking if salt-call is installed
+salt-call was not found.
+Checking if salt-master is installed
+salt-master was not found.
+Using Bootstrap Options:  -F -c /tmp -k /tmp/minion-seed-keys -M stable
+Bootstrapping Salt... (this may take a while)
+ *  INFO: Running version: 2021.09.17
+ *  INFO: Executed by: 
+ *  INFO: Command line: 'bootstrap-salt.sh -F -c /tmp -k /tmp/minion-seed-keys -M stable'
+ *  INFO: System Information:
+ *  INFO:   CPU:          GenuineIntel
+ *  INFO:   CPU Arch:     x86_64
+ *  INFO:   OS Name:      Linux
+ *  INFO:   OS Version:   5.4.0-86-generic
+ *  INFO:   Distribution: Ubuntu 20.04
+ *  INFO: Installing minion
+ *  INFO: Installing master
+ *  INFO: Found function install_ubuntu_stable_deps
+ *  INFO: Found function config_salt
+ *  INFO: Found function preseed_master
+ *  INFO: Found function install_ubuntu_stable
+ *  INFO: Found function install_ubuntu_stable_post
+ *  INFO: Found function install_ubuntu_restart_daemons
+ *  INFO: Found function daemons_running
+ *  INFO: Found function install_ubuntu_check_services
+ *  INFO: Running install_ubuntu_stable_deps()
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [874 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1221 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [14.3 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [855 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [182 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [18.8 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [24.6 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [6776 B]
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [620 B]
+Get:20 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [2568 B]
+Get:21 http://archive.ubuntu.com/ubuntu focal-backports/main Translation-en [1120 B]
+Get:22 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [400 B]
+Get:23 http://archive.ubuntu.com/ubuntu focal-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:24 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [5800 B]
+Get:25 http://archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [2068 B]
+Get:26 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [276 B]
+Get:27 http://archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
+Get:28 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [168 kB]
+Get:29 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [8716 B]
+Get:30 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [417 kB]
+Get:31 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [59.8 kB]
+Get:32 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [639 kB]
+Get:33 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [102 kB]
+Get:34 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [12.4 kB]
+Get:35 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [21.9 kB]
+Get:36 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [4948 B]
+Get:37 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [540 B]
+Fetched 19.2 MB in 6s (3483 kB/s)
+Reading package lists...
+
+Reading package lists...
+
+Building dependency tree...
+
+Reading state information...
+
+wget is already the newest version (1.20.3-1ubuntu1).
+wget set to manually installed.
+gnupg is already the newest version (2.2.19-3ubuntu2.1).
+gnupg set to manually installed.
+The following NEW packages will be installed:
+  apt-transport-https
+The following packages will be upgraded:
+  ca-certificates
+1 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 150 kB of archives.
+After this operation, 161 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ca-certificates all 20210119~20.04.2 [145 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.6 [4680 B]
+Preconfiguring packages ...
+Fetched 150 kB in 0s (545 kB/s)
+(Reading database ...
+(Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%(Reading database ... 63195 files and directories currently installed.)
+Preparing to unpack .../ca-certificates_20210119~20.04.2_all.deb ...
+Unpacking ca-certificates (20210119~20.04.2) over (20210119~20.04.1) ...
+Selecting previously unselected package apt-transport-https.
+Preparing to unpack .../apt-transport-https_2.0.6_all.deb ...
+Unpacking apt-transport-https (2.0.6) ...
+Setting up apt-transport-https (2.0.6) ...
+Setting up ca-certificates (20210119~20.04.2) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 1 removed; done.
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for ca-certificates (20210119~20.04.2) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Get:4 https://repo.saltproject.io/py3/ubuntu/20.04/amd64/latest focal InRelease [2125 B]
+Hit:5 http://security.ubuntu.com/ubuntu focal-security InRelease
+Get:6 https://repo.saltproject.io/py3/ubuntu/20.04/amd64/latest focal/main amd64 Packages [2731 B]
+Fetched 4856 B in 0s (9832 B/s)
+Reading package lists...
+
+Hit:1 https://repo.saltproject.io/py3/ubuntu/20.04/amd64/latest focal InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:5 http://security.ubuntu.com/ubuntu focal-security InRelease
+Reading package lists...
+
+Reading package lists...
+
+Building dependency tree...
+
+Reading state information...
+
+python3-requests is already the newest version (2.22.0-2ubuntu1).
+python3-requests set to manually installed.
+pciutils is already the newest version (1:3.6.4-1ubuntu0.20.04.1).
+pciutils set to manually installed.
+procps is already the newest version (2:3.3.16-1ubuntu2.3).
+procps set to manually installed.
+python3-apt is already the newest version (2.0.0ubuntu0.20.04.6).
+python3-apt set to manually installed.
+python3-yaml is already the newest version (5.3.1-1ubuntu0.1).
+python3-yaml set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+ *  INFO: Running config_salt()
+ *  INFO: Running preseed_master()
+ *  INFO: Running install_ubuntu_stable()
+Reading package lists...
+
+Building dependency tree...
+Reading state information...
+
+The following additional packages will be installed:
+  dctrl-tools debconf-utils libnorm1 libpgm-5.2-0 libzmq5 net-tools
+  python3-contextvars python3-croniter python3-dateutil python3-git
+  python3-gitdb python3-gnupg python3-immutables python3-msgpack
+  python3-psutil python3-pycryptodome python3-smmap python3-tz python3-zmq
+  salt-common
+Suggested packages:
+  debtags python-git-doc python-psutil-doc python3-nose ifupdown
+  python3-pycurl python3-augeas
+The following NEW packages will be installed:
+  dctrl-tools debconf-utils libnorm1 libpgm-5.2-0 libzmq5 net-tools
+  python3-contextvars python3-croniter python3-dateutil python3-git
+  python3-gitdb python3-gnupg python3-immutables python3-msgpack
+  python3-psutil python3-pycryptodome python3-smmap python3-tz python3-zmq
+  salt-common salt-master salt-minion
+0 upgraded, 22 newly installed, 0 to remove and 2 not upgraded.
+Need to get 14.4 MB of archives.
+After this operation, 57.9 MB of additional disk space will be used.
+Get:1 https://repo.saltproject.io/py3/ubuntu/20.04/amd64/latest focal/main amd64 python3-immutables amd64 0.14-1 [41.2 kB]
+Get:2 https://repo.saltproject.io/py3/ubuntu/20.04/amd64/latest focal/main amd64 python3-contextvars all 2.4-1 [4536 B]
+Get:3 https://repo.saltproject.io/py3/ubuntu/20.04/amd64/latest focal/main amd64 salt-common all 3003.3+ds-1 [7136 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/main amd64 dctrl-tools amd64 2.24-3 [61.5 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal/universe amd64 debconf-utils all 1.5.73 [57.2 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal/universe amd64 libnorm1 amd64 1.5.8+dfsg2-2build1 [290 kB]
+Get:7 https://repo.saltproject.io/py3/ubuntu/20.04/amd64/latest focal/main amd64 salt-master all 3003.3+ds-1 [40.7 kB]
+Get:8 https://repo.saltproject.io/py3/ubuntu/20.04/amd64/latest focal/main amd64 salt-minion all 3003.3+ds-1 [28.5 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal/universe amd64 libpgm-5.2-0 amd64 5.2.122~dfsg-3ubuntu1 [158 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal/universe amd64 libzmq5 amd64 4.3.2-2ubuntu1 [242 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal/main amd64 net-tools amd64 1.60+git20180626.aebd88e-1ubuntu1 [196 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-dateutil all 2.7.3-3ubuntu1 [63.3 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-tz all 2019.3-1 [24.4 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-croniter all 0.3.29-2ubuntu1 [16.5 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-smmap all 2.0.5-2 [21.2 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-gitdb all 2.0.6-2 [46.6 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-git all 3.0.7-1 [302 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-gnupg all 0.4.5-2 [18.3 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-msgpack amd64 0.6.2-1 [73.5 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-psutil amd64 5.5.1-1ubuntu4 [141 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-pycryptodome amd64 3.6.1-2build4 [5102 kB]
+Get:22 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-zmq amd64 18.1.1-3 [294 kB]
+Fetched 14.4 MB in 2s (6047 kB/s)
+Selecting previously unselected package dctrl-tools.
+(Reading database ...
+(Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%(Reading database ... 63198 files and directories currently installed.)
+Preparing to unpack .../00-dctrl-tools_2.24-3_amd64.deb ...
+Unpacking dctrl-tools (2.24-3) ...
+Selecting previously unselected package debconf-utils.
+Preparing to unpack .../01-debconf-utils_1.5.73_all.deb ...
+Unpacking debconf-utils (1.5.73) ...
+Selecting previously unselected package libnorm1:amd64.
+Preparing to unpack .../02-libnorm1_1.5.8+dfsg2-2build1_amd64.deb ...
+Unpacking libnorm1:amd64 (1.5.8+dfsg2-2build1) ...
+Selecting previously unselected package libpgm-5.2-0:amd64.
+Preparing to unpack .../03-libpgm-5.2-0_5.2.122~dfsg-3ubuntu1_amd64.deb ...
+Unpacking libpgm-5.2-0:amd64 (5.2.122~dfsg-3ubuntu1) ...
+Selecting previously unselected package libzmq5:amd64.
+Preparing to unpack .../04-libzmq5_4.3.2-2ubuntu1_amd64.deb ...
+Unpacking libzmq5:amd64 (4.3.2-2ubuntu1) ...
+Selecting previously unselected package net-tools.
+Preparing to unpack .../05-net-tools_1.60+git20180626.aebd88e-1ubuntu1_amd64.deb ...
+Unpacking net-tools (1.60+git20180626.aebd88e-1ubuntu1) ...
+Selecting previously unselected package python3-immutables.
+Preparing to unpack .../06-python3-immutables_0.14-1_amd64.deb ...
+Unpacking python3-immutables (0.14-1) ...
+Selecting previously unselected package python3-contextvars.
+Preparing to unpack .../07-python3-contextvars_2.4-1_all.deb ...
+Unpacking python3-contextvars (2.4-1) ...
+Selecting previously unselected package python3-dateutil.
+Preparing to unpack .../08-python3-dateutil_2.7.3-3ubuntu1_all.deb ...
+Unpacking python3-dateutil (2.7.3-3ubuntu1) ...
+Selecting previously unselected package python3-tz.
+Preparing to unpack .../09-python3-tz_2019.3-1_all.deb ...
+Unpacking python3-tz (2019.3-1) ...
+Selecting previously unselected package python3-croniter.
+
+Preparing to unpack .../10-python3-croniter_0.3.29-2ubuntu1_all.deb ...
+
+Unpacking python3-croniter (0.3.29-2ubuntu1) ...
+
+Selecting previously unselected package python3-smmap.
+
+Preparing to unpack .../11-python3-smmap_2.0.5-2_all.deb ...
+
+Unpacking python3-smmap (2.0.5-2) ...
+
+Selecting previously unselected package python3-gitdb.
+
+Preparing to unpack .../12-python3-gitdb_2.0.6-2_all.deb ...
+
+Unpacking python3-gitdb (2.0.6-2) ...
+
+Selecting previously unselected package python3-git.
+
+Preparing to unpack .../13-python3-git_3.0.7-1_all.deb ...
+
+Unpacking python3-git (3.0.7-1) ...
+
+Selecting previously unselected package python3-gnupg.
+
+Preparing to unpack .../14-python3-gnupg_0.4.5-2_all.deb ...
+
+Unpacking python3-gnupg (0.4.5-2) ...
+
+Selecting previously unselected package python3-msgpack.
+
+Preparing to unpack .../15-python3-msgpack_0.6.2-1_amd64.deb ...
+
+Unpacking python3-msgpack (0.6.2-1) ...
+
+Selecting previously unselected package python3-psutil.
+
+Preparing to unpack .../16-python3-psutil_5.5.1-1ubuntu4_amd64.deb ...
+
+Unpacking python3-psutil (5.5.1-1ubuntu4) ...
+
+Selecting previously unselected package python3-pycryptodome.
+
+Preparing to unpack .../17-python3-pycryptodome_3.6.1-2build4_amd64.deb ...
+
+Unpacking python3-pycryptodome (3.6.1-2build4) ...
+
+Selecting previously unselected package python3-zmq.
+
+Preparing to unpack .../18-python3-zmq_18.1.1-3_amd64.deb ...
+
+Unpacking python3-zmq (18.1.1-3) ...
+
+Selecting previously unselected package salt-common.
+
+Preparing to unpack .../19-salt-common_3003.3+ds-1_all.deb ...
+
+Unpacking salt-common (3003.3+ds-1) ...
+
+Selecting previously unselected package salt-master.
+
+Preparing to unpack .../20-salt-master_3003.3+ds-1_all.deb ...
+
+Unpacking salt-master (3003.3+ds-1) ...
+
+Selecting previously unselected package salt-minion.
+
+Preparing to unpack .../21-salt-minion_3003.3+ds-1_all.deb ...
+
+Unpacking salt-minion (3003.3+ds-1) ...
+
+Setting up net-tools (1.60+git20180626.aebd88e-1ubuntu1) ...
+
+Setting up python3-gnupg (0.4.5-2) ...
+
+Setting up python3-pycryptodome (3.6.1-2build4) ...
+
+/usr/lib/python3/dist-packages/Cryptodome/SelfTest/Random/test_random.py:103: SyntaxWarning: "is" with a literal. Did you mean "=="?
+
+  if sys.version_info[0] is 3:
+
+Setting up libnorm1:amd64 (1.5.8+dfsg2-2build1) ...
+
+Setting up python3-psutil (5.5.1-1ubuntu4) ...
+
+Setting up python3-tz (2019.3-1) ...
+
+Setting up debconf-utils (1.5.73) ...
+
+Setting up python3-dateutil (2.7.3-3ubuntu1) ...
+
+Setting up python3-msgpack (0.6.2-1) ...
+
+Setting up python3-smmap (2.0.5-2) ...
+
+Setting up python3-immutables (0.14-1) ...
+
+Setting up dctrl-tools (2.24-3) ...
+
+Setting up libpgm-5.2-0:amd64 (5.2.122~dfsg-3ubuntu1) ...
+
+Setting up libzmq5:amd64 (4.3.2-2ubuntu1) ...
+
+Setting up python3-contextvars (2.4-1) ...
+
+Setting up python3-croniter (0.3.29-2ubuntu1) ...
+
+Setting up python3-gitdb (2.0.6-2) ...
+
+Setting up python3-zmq (18.1.1-3) ...
+
+Setting up python3-git (3.0.7-1) ...
+
+Setting up salt-common (3003.3+ds-1) ...
+
+Setting up salt-minion (3003.3+ds-1) ...
+
+
+Configuration file '/etc/salt/minion'
+
+ ==> File on system created by you or by a script.
+
+ ==> File also in package provided by package maintainer.
+
+ ==> Using current old file as you requested.
+
+Created symlink /etc/systemd/system/multi-user.target.wants/salt-minion.service → /lib/systemd/system/salt-minion.service.
+
+Setting up salt-master (3003.3+ds-1) ...
+
+Configuration file '/etc/salt/master'
+ ==> File on system created by you or by a script.
+ ==> File also in package provided by package maintainer.
+ ==> Using current old file as you requested.
+Created symlink /etc/systemd/system/multi-user.target.wants/salt-master.service → /lib/systemd/system/salt-master.service.
+
+Processing triggers for ufw (0.36-6) ...
+Processing triggers for systemd (245.4-4ubuntu3.13) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+ *  INFO: Running install_ubuntu_stable_post()
+ *  INFO: Running install_ubuntu_check_services()
+ *  INFO: Running install_ubuntu_restart_daemons()
+ *  INFO: Running daemons_running()
+ *  INFO: Salt installed!
+Salt successfully configured and installed!
+run_overstate set to false. Not running state.overstate.
+run_highstate set to false. Not running state.highstate.
+orchestrate is nil. Not running state.orchestrate.
+==> main: Running action triggers after up ...
+==> main: Running trigger...
+    main: Running: /tmp/vagrant-shell20210925-42944-1pt0dl3.sh
+    main: main:
+    main: ----------
+    main:           ID: install.base
+    main:     Function: pkg.installed
+    main:       Result: True
+    main:      Comment: 4 targeted packages were installed/updated.
+    main:               The following packages were already installed: nano, curl, ca-certificates, gnupg, lsb-release, tmux, htop, apt-transport-https
+    main:      Started: 00:25:17.076865
+    main:     Duration: 39892.276 ms
+    main:      Changes:
+    main:               ----------
+    main:               binutils:
+    main:                   ----------
+    main:                   new:
+    main:                       2.34-6ubuntu1.1
+    main:                   old:
+    main:               binutils-common:
+    main:                   ----------
+    main:                   new:
+    main:                       2.34-6ubuntu1.1
+    main:                   old:
+    main:               binutils-x86-64-linux-gnu:
+    main:                   ----------
+    main:                   new:
+    main:                       2.34-6ubuntu1.1
+    main:                   old:
+    main:               build-essential:
+    main:                   ----------
+    main:                   new:
+    main:                       12.8ubuntu1.1
+    main:                   old:
+    main:               cpp:
+    main:                   ----------
+    main:                   new:
+    main:                       4:9.3.0-1ubuntu2
+    main:                   old:
+    main:               cpp-9:
+    main:                   ----------
+    main:                   new:
+    main:                       9.3.0-17ubuntu1~20.04
+    main:                   old:
+    main:               dpkg-dev:
+    main:                   ----------
+    main:                   new:
+    main:                       1.19.7ubuntu3
+    main:                   old:
+    main:               fakeroot:
+    main:                   ----------
+    main:                   new:
+    main:                       1.24-1
+    main:                   old:
+    main:               g++:
+    main:                   ----------
+    main:                   new:
+    main:                       4:9.3.0-1ubuntu2
+    main:                   old:
+    main:               g++-9:
+    main:                   ----------
+    main:                   new:
+    main:                       9.3.0-17ubuntu1~20.04
+    main:                   old:
+    main:               gcc:
+    main:                   ----------
+    main:                   new:
+    main:                       4:9.3.0-1ubuntu2
+    main:                   old:
+    main:               gcc-9:
+    main:                   ----------
+    main:                   new:
+    main:                       9.3.0-17ubuntu1~20.04
+    main:                   old:
+    main:               gcc-9-base:
+    main:                   ----------
+    main:                   new:
+    main:                       9.3.0-17ubuntu1~20.04
+    main:                   old:
+    main:               iftop:
+    main:                   ----------
+    main:                   new:
+    main:                       1.0~pre4-6build1
+    main:                   old:
+    main:               libalgorithm-diff-perl:
+    main:                   ----------
+    main:                   new:
+    main:                       1.19.03-2
+    main:                   old:
+    main:               libalgorithm-diff-xs-perl:
+    main:                   ----------
+    main:                   new:
+    main:                       0.04-6
+    main:                   old:
+    main:               libalgorithm-merge-perl:
+    main:                   ----------
+    main:                   new:
+    main:                       0.08-3
+    main:                   old:
+    main:               libasan5:
+    main:                   ----------
+    main:                   new:
+    main:                       9.3.0-17ubuntu1~20.04
+    main:                   old:
+    main:               libatomic1:
+    main:                   ----------
+    main:                   new:
+    main:                       10.3.0-1ubuntu1~20.04
+    main:                   old:
+    main:               libbinutils:
+    main:                   ----------
+    main:                   new:
+    main:                       2.34-6ubuntu1.1
+    main:                   old:
+    main:               libc-dev-bin:
+    main:                   ----------
+    main:                   new:
+    main:                       2.31-0ubuntu9.2
+    main:                   old:
+    main:               libc6-dev:
+    main:                   ----------
+    main:                   new:
+    main:                       2.31-0ubuntu9.2
+    main:                   old:
+    main:               libcc1-0:
+    main:                   ----------
+    main:                   new:
+    main:                       10.3.0-1ubuntu1~20.04
+    main:                   old:
+    main:               libcrypt-dev:
+    main:                   ----------
+    main:                   new:
+    main:                       1:4.4.10-10ubuntu4
+    main:                   old:
+    main:               libctf-nobfd0:
+    main:                   ----------
+    main:                   new:
+    main:                       2.34-6ubuntu1.1
+    main:                   old:
+    main:               libctf0:
+    main:                   ----------
+    main:                   new:
+    main:                       2.34-6ubuntu1.1
+    main:                   old:
+    main:               libdpkg-perl:
+    main:                   ----------
+    main:                   new:
+    main:                       1.19.7ubuntu3
+    main:                   old:
+    main:               libexpat1-dev:
+    main:                   ----------
+    main:                   new:
+    main:                       2.2.9-1build1
+    main:                   old:
+    main:               libfakeroot:
+    main:                   ----------
+    main:                   new:
+    main:                       1.24-1
+    main:                   old:
+    main:               libfile-fcntllock-perl:
+    main:                   ----------
+    main:                   new:
+    main:                       0.22-3build4
+    main:                   old:
+    main:               libgcc-9-dev:
+    main:                   ----------
+    main:                   new:
+    main:                       9.3.0-17ubuntu1~20.04
+    main:                   old:
+    main:               libgomp1:
+    main:                   ----------
+    main:                   new:
+    main:                       10.3.0-1ubuntu1~20.04
+    main:                   old:
+    main:               libisl22:
+    main:                   ----------
+    main:                   new:
+    main:                       0.22.1-1
+    main:                   old:
+    main:               libitm1:
+    main:                   ----------
+    main:                   new:
+    main:                       10.3.0-1ubuntu1~20.04
+    main:                   old:
+    main:               liblsan0:
+    main:                   ----------
+    main:                   new:
+    main:                       10.3.0-1ubuntu1~20.04
+    main:                   old:
+    main:               libmpc3:
+    main:                   ----------
+    main:                   new:
+    main:                       1.1.0-1
+    main:                   old:
+    main:               libpython2-stdlib:
+    main:                   ----------
+    main:                   new:
+    main:                       2.7.17-2ubuntu4
+    main:                   old:
+    main:               libpython2.7-minimal:
+    main:                   ----------
+    main:                   new:
+    main:                       2.7.18-1~20.04.1
+    main:                   old:
+    main:               libpython2.7-stdlib:
+    main:                   ----------
+    main:                   new:
+    main:                       2.7.18-1~20.04.1
+    main:                   old:
+    main:               libpython3-dev:
+    main:                   ----------
+    main:                   new:
+    main:                       3.8.2-0ubuntu2
+    main:                   old:
+    main:               libpython3.8-dev:
+    main:                   ----------
+    main:                   new:
+    main:                       3.8.10-0ubuntu1~20.04
+    main:                   old:
+    main:               libquadmath0:
+    main:                   ----------
+    main:                   new:
+    main:                       10.3.0-1ubuntu1~20.04
+    main:                   old:
+    main:               libssh2-1:
+    main:                   ----------
+    main:                   new:
+    main:                       1.8.0-2.1build1
+    main:                   old:
+    main:               libstdc++-9-dev:
+    main:                   ----------
+    main:                   new:
+    main:                       9.3.0-17ubuntu1~20.04
+    main:                   old:
+    main:               libtsan0:
+    main:                   ----------
+    main:                   new:
+    main:                       10.3.0-1ubuntu1~20.04
+    main:                   old:
+    main:               libubsan1:
+    main:                   ----------
+    main:                   new:
+    main:                       10.3.0-1ubuntu1~20.04
+    main:                   old:
+    main:               linux-libc-dev:
+    main:                   ----------
+    main:                   new:
+    main:                       5.4.0-86.97
+    main:                   old:
+    main:               make:
+    main:                   ----------
+    main:                   new:
+    main:                       4.2.1-1.2
+    main:                   old:
+    main:               manpages-dev:
+    main:                   ----------
+    main:                   new:
+    main:                       5.05-1
+    main:                   old:
+    main:               mc:
+    main:                   ----------
+    main:                   new:
+    main:                       3:4.8.24-2ubuntu1
+    main:                   old:
+    main:               mc-data:
+    main:                   ----------
+    main:                   new:
+    main:                       3:4.8.24-2ubuntu1
+    main:                   old:
+    main:               python-apt:
+    main:                   ----------
+    main:                   new:
+    main:                       2.0.0ubuntu0.20.04.6
+    main:                   old:
+    main:               python-pip-whl:
+    main:                   ----------
+    main:                   new:
+    main:                       20.0.2-5ubuntu1.6
+    main:                   old:
+    main:               python2:
+    main:                   ----------
+    main:                   new:
+    main:                       2.7.17-2ubuntu4
+    main:                   old:
+    main:               python2-minimal:
+    main:                   ----------
+    main:                   new:
+    main:                       2.7.17-2ubuntu4
+    main:                   old:
+    main:               python2.7:
+    main:                   ----------
+    main:                   new:
+    main:                       2.7.18-1~20.04.1
+    main:                   old:
+    main:               python2.7-minimal:
+    main:                   ----------
+    main:                   new:
+    main:                       2.7.18-1~20.04.1
+    main:                   old:
+    main:               python3-dev:
+    main:                   ----------
+    main:                   new:
+    main:                       3.8.2-0ubuntu2
+    main:                   old:
+    main:               python3-pip:
+    main:                   ----------
+    main:                   new:
+    main:                       20.0.2-5ubuntu1.6
+    main:                   old:
+    main:               python3-wheel:
+    main:                   ----------
+    main:                   new:
+    main:                       0.34.2-1
+    main:                   old:
+    main:               python3.8-dev:
+    main:                   ----------
+    main:                   new:
+    main:                       3.8.10-0ubuntu1~20.04
+    main:                   old:
+    main:               unzip:
+    main:                   ----------
+    main:                   new:
+    main:                       6.0-25ubuntu1
+    main:                   old:
+    main:               zlib1g-dev:
+    main:                   ----------
+    main:                   new:
+    main:                       1:1.2.11.dfsg-2ubuntu1.2
+    main:                   old:
+    main: ----------
+    main:           ID: docker-py
+    main:     Function: pip.installed
+    main:       Result: True
+    main:      Comment: All packages were successfully installed
+    main:      Started: 00:25:57.879345
+    main:     Duration: 5591.593 ms
+    main:      Changes:
+    main:               ----------
+    main:               docker-py==1.10.6:
+    main:                   Installed
+    main: ----------
+    main:           ID: docker
+    main:     Function: pip.installed
+    main:       Result: True
+    main:      Comment: All packages were successfully installed
+    main:      Started: 00:26:04.192028
+    main:     Duration: 4013.101 ms
+    main:      Changes:
+    main:               ----------
+    main:               docker==5.0.2:
+    main:                   Installed
+    main: ----------
+    main:           ID: stop.multipathd.socket
+    main:     Function: service.dead
+    main:         Name: multipathd.socket
+    main:       Result: True
+    main:      Comment: Service multipathd.socket has been disabled, and is dead
+    main:      Started: 00:26:08.216627
+    main:     Duration: 344.692 ms
+    main:      Changes:
+    main:               ----------
+    main:               multipathd.socket:
+    main:                   True
+    main: ----------
+    main:           ID: stop.multipathd
+    main:     Function: service.dead
+    main:         Name: multipathd
+    main:       Result: True
+    main:      Comment: Service multipathd has been disabled, and is dead
+    main:      Started: 00:26:08.561589
+    main:     Duration: 318.361 ms
+    main:      Changes:
+    main:               ----------
+    main:               multipathd:
+    main:                   True
+    main: ----------
+    main:           ID: addrepo.docker
+    main:     Function: cmd.script
+    main:         Name: Add Docker Repo
+    main:       Result: True
+    main:      Comment: Command 'Add Docker Repo' run
+    main:      Started: 00:26:08.884013
+    main:     Duration: 1471.22 ms
+    main:      Changes:
+    main:               ----------
+    main:               pid:
+    main:                   18717
+    main:               retcode:
+    main:                   0
+    main:               stderr:
+    main:               stdout:
+    main: ----------
+    main:           ID: addrepo.terraform
+    main:     Function: cmd.script
+    main:         Name: Add Terraform Repo
+    main:       Result: True
+    main:      Comment: Command 'Add Terraform Repo' run
+    main:      Started: 00:26:10.355583
+    main:     Duration: 5010.259 ms
+    main:      Changes:
+    main:               ----------
+    main:               pid:
+    main:                   18751
+    main:               retcode:
+    main:                   0
+    main:               stderr:
+    main:                   Warning: apt-key output should not be parsed (stdout is not a terminal)
+    main:               stdout:
+    main:                   OK
+    main:                   Get:1 https://download.docker.com/linux/ubuntu focal InRelease [52.1 kB]
+    main:                   Hit:2 https://repo.saltproject.io/py3/ubuntu/20.04/amd64/latest focal InRelease
+    main:                   Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease
+    main:                   Hit:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+    main:                   Get:5 https://apt.releases.hashicorp.com focal InRelease [4419 B]
+    main:                   Get:6 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages [10.7 kB]
+    main:                   Hit:7 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+    main:                   Get:8 https://apt.releases.hashicorp.com focal/main amd64 Packages [31.9 kB]
+    main:                   Hit:9 http://security.ubuntu.com/ubuntu focal-security InRelease
+    main:                   Fetched 99.2 kB in 1s (171 kB/s)
+    main:                   Reading package lists...
+    main: 
+    main: Summary for main
+    main: ------------
+    main: Succeeded: 7 (changed=7)
+    main: Failed:    0
+    main: ------------
+    main: Total states run:     7
+    main: Total run time:  56.642 s
+    main: main:
+    main: ----------
+    main:           ID: install.docker
+    main:     Function: pkg.installed
+    main:       Result: True
+    main:      Comment: 3 targeted packages were installed/updated.
+    main:      Started: 00:26:17.361353
+    main:     Duration: 44408.219 ms
+    main:      Changes:
+    main:               ----------
+    main:               containerd.io:
+    main:                   ----------
+    main:                   new:
+    main:                       1.4.9-1
+    main:                   old:
+    main:               docker-ce:
+    main:                   ----------
+    main:                   new:
+    main:                       5:20.10.8~3-0~ubuntu-focal
+    main:                   old:
+    main:               docker-ce-cli:
+    main:                   ----------
+    main:                   new:
+    main:                       5:20.10.8~3-0~ubuntu-focal
+    main:                   old:
+    main:               docker-ce-rootless-extras:
+    main:                   ----------
+    main:                   new:
+    main:                       5:20.10.8~3-0~ubuntu-focal
+    main:                   old:
+    main:               docker-scan-plugin:
+    main:                   ----------
+    main:                   new:
+    main:                       0.8.0~ubuntu-focal
+    main:                   old:
+    main:               pigz:
+    main:                   ----------
+    main:                   new:
+    main:                       2.4-1
+    main:                   old:
+    main:               slirp4netns:
+    main:                   ----------
+    main:                   new:
+    main:                       0.4.3-1
+    main:                   old:
+    main: ----------
+    main:           ID: stop.docker.socket
+    main:     Function: service.dead
+    main:         Name: docker.socket
+    main:       Result: True
+    main:      Comment: Service docker.socket has been disabled, and is dead
+    main:      Started: 00:27:01.780318
+    main:     Duration: 379.14 ms
+    main:      Changes:
+    main:               ----------
+    main:               docker.socket:
+    main:                   True
+    main: ----------
+    main:           ID: stop.docker
+    main:     Function: service.dead
+    main:         Name: docker
+    main:       Result: True
+    main:      Comment: Service docker has been disabled, and is in the desired state
+    main:      Started: 00:27:02.159709
+    main:     Duration: 663.628 ms
+    main:      Changes:
+    main:               ----------
+    main:               docker:
+    main:                   True
+    main: ----------
+    main:           ID: vagrant
+    main:     Function: user.present
+    main:       Result: True
+    main:      Comment: Updated user vagrant
+    main:      Started: 00:27:02.825337
+    main:     Duration: 76.225 ms
+    main:      Changes:
+    main:               ----------
+    main:               groups:
+    main:                   - docker
+    main:                   - vagrant
+    main: ----------
+    main:           ID: /etc/docker/daemon.json
+    main:     Function: file.copy
+    main:       Result: True
+    main:      Comment: Copied "/sync/etc/docker/daemon.json" to "/etc/docker/daemon.json"
+    main:      Started: 00:27:02.907245
+    main:     Duration: 13.286 ms
+    main:      Changes:
+    main:               ----------
+    main:               /etc/docker/daemon.json:
+    main:                   /sync/etc/docker/daemon.json
+    main: ----------
+    main:           ID: /etc/systemd/system/docker.service.d/override.conf
+    main:     Function: file.copy
+    main:       Result: True
+    main:      Comment: Copied "/sync/etc/systemd/system/docker.service.d/override.conf" to "/etc/systemd/system/docker.service.d/override.conf"
+    main:      Started: 00:27:02.920697
+    main:     Duration: 3.826 ms
+    main:      Changes:
+    main:               ----------
+    main:               /etc/systemd/system/docker.service.d/override.conf:
+    main:                   /sync/etc/systemd/system/docker.service.d/override.conf
+    main: ----------
+    main:           ID: setup.docker-compose
+    main:     Function: cmd.run
+    main:         Name: curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    main:       Result: True
+    main:      Comment: Command "curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose" run
+    main:      Started: 00:27:02.925602
+    main:     Duration: 4101.25 ms
+    main:      Changes:
+    main:               ----------
+    main:               pid:
+    main:                   22127
+    main:               retcode:
+    main:                   0
+    main:               stderr:
+    main:                     % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+    main:                                                    Dload  Upload   Total   Spent    Left  Speed
+    main: 
+    main:                     0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+    main:                     0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+    main:                   100   633  100   633    0     0   3279      0 --:--:-- --:--:-- --:--:--  3262
+    main: 
+    main:                    44 12.1M   44 5490k    0     0  4749k      0  0:00:02  0:00:01  0:00:01 4749k
+    main:                    89 12.1M   89 10.9M    0     0  5188k      0  0:00:02  0:00:02 --:--:-- 5696k
+    main:                   100 12.1M  100 12.1M    0     0  5232k      0  0:00:02  0:00:02 --:--:-- 5690k
+    main:               stdout:
+    main: ----------
+    main:           ID: /usr/local/bin/docker-compose
+    main:     Function: file.managed
+    main:       Result: True
+    main:      Comment:
+    main:      Started: 00:27:07.028045
+    main:     Duration: 8.822 ms
+    main:      Changes:
+    main:               ----------
+    main:               mode:
+    main:                   0755
+    main: 
+    main: Summary for main
+    main: ------------
+    main: Succeeded: 8 (changed=8)
+    main: Failed:    0
+    main: ------------
+    main: Total states run:     8
+    main: Total run time:  49.654 s
+    main: main:
+    main: ----------
+    main:           ID: start.docker.socket
+    main:     Function: service.running
+    main:         Name: docker.socket
+    main:       Result: True
+    main:      Comment: Service docker.socket has been enabled, and is running
+    main:      Started: 00:27:09.803434
+    main:     Duration: 320.348 ms
+    main:      Changes:
+    main:               ----------
+    main:               docker.socket:
+    main:                   True
+    main: ----------
+    main:           ID: start.docker
+    main:     Function: service.running
+    main:         Name: docker
+    main:       Result: True
+    main:      Comment: Service docker has been enabled, and is running
+    main:      Started: 00:27:10.124055
+    main:     Duration: 3573.418 ms
+    main:      Changes:
+    main:               ----------
+    main:               docker:
+    main:                   True
+    main: 
+    main: Summary for main
+    main: ------------
+    main: Succeeded: 2 (changed=2)
+    main: Failed:    0
+    main: ------------
+    main: Total states run:     2
+    main: Total run time:   3.894 s
+    main: main:
+    main: ----------
+    main:           ID: install.terraform
+    main:     Function: pkg.installed
+    main:       Result: True
+    main:      Comment: The following packages were installed/updated: terraform
+    main:      Started: 00:27:15.757623
+    main:     Duration: 16161.444 ms
+    main:      Changes:
+    main:               ----------
+    main:               terraform:
+    main:                   ----------
+    main:                   new:
+    main:                       1.0.7
+    main:                   old:
+    main: 
+    main: Summary for main
+    main: ------------
+    main: Succeeded: 1 (changed=1)
+    main: Failed:    0
+    main: ------------
+    main: Total states run:     1
+    main: Total run time:  16.161 s
+    main: main:
+    main: ----------
+    main:           ID: deploy
+    main:     Function: cmd.run
+    main:         Name: /sync/scripts/tfdeploy.sh app
+    main:       Result: True
+    main:      Comment: Command "/sync/scripts/tfdeploy.sh app" run
+    main:      Started: 00:27:33.488900
+    main:     Duration: 54235.301 ms
+    main:      Changes:
+    main:               ----------
+    main:               pid:
+    main:                   23439
+    main:               retcode:
+    main:                   0
+    main:               stderr:
+    main:               stdout:
+    main:                   /sync/tf/app /root
+    main: 
+    main:                   ?[0m?[1mInitializing the backend...?[0m
+    main: 
+    main:                   ?[0m?[1mInitializing provider plugins...?[0m
+    main:                   - Reusing previous version of kreuzwerker/docker from the dependency lock file
+    main:                   - Reusing previous version of hashicorp/null from the dependency lock file
+    main:                   - Using previously-installed hashicorp/null v3.1.0
+    main:                   - Using previously-installed kreuzwerker/docker v2.14.0
+    main: 
+    main:                   ?[0m?[1m?[32mTerraform has been successfully initialized!?[0m?[32m?[0m
+    main:                   ?[0m?[32m
+    main:                   You may now begin working with Terraform. Try running "terraform plan" to see
+    main:                   any changes that are required for your infrastructure. All Terraform commands
+    main:                   should now work.
+    main: 
+    main:                   If you ever set or change modules or backend configuration for Terraform,
+    main:                   rerun this command to reinitialize your working directory. If you forget, other
+    main:                   commands will detect it and remind you to do so if necessary.?[0m
+    main:                   ?[32m?[1mSuccess!?[0m The configuration is valid.
+    main:                   ?[0m
+    main:                   ?[0m?[1mnull_resource.files: Refreshing state... [id=1991850840617897130]?[0m
+    main:                   ?[0m?[1mdocker_image.app1: Refreshing state... [id=sha256:aab268e17775bf36740936f30a2ee6661e3cbde54f5a646d2d0e14136b802f7bapp1]?[0m
+    main:                   ?[0m?[1mdocker_container.app1: Refreshing state... [id=f021866880b0ae74be83e7bfc88b65ed10f5a174bb362ef68c5c66324136e0d5]?[0m
+    main:                   ?[0m
+    main:                   ?[1m?[36mNote:?[0m?[1m Objects have changed outside of Terraform?[0m
+    main: 
+    main:                   ?[0mTerraform detected the following changes made outside of Terraform since the
+    main:                   last "terraform apply":
+    main: 
+    main:                   ?[1m  # docker_image.app1?[0m has been deleted?[0m?[0m
+    main:                   ?[0m  ?[31m-?[0m?[0m resource "docker_image" "app1" {
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mid?[0m?[0m     = "sha256:aab268e17775bf36740936f30a2ee6661e3cbde54f5a646d2d0e14136b802f7bapp1" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mlatest?[0m?[0m = "sha256:aab268e17775bf36740936f30a2ee6661e3cbde54f5a646d2d0e14136b802f7b" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mname?[0m?[0m   = "app1" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main: 
+    main:                         ?[31m-?[0m ?[0mbuild {
+    main:                             ?[31m-?[0m ?[0m?[1m?[0mdockerfile?[0m?[0m = "Dockerfile" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                             ?[31m-?[0m ?[0m?[1m?[0mpath?[0m?[0m       = "/sync/tf/app/project/app1/image/" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                             ?[31m-?[0m ?[0m?[1m?[0mremove?[0m?[0m     = true ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                             ?[31m-?[0m ?[0m?[1m?[0mtag?[0m?[0m        = [] ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                           }
+    main:                       }
+    main:                   ?[1m  # docker_container.app1?[0m has been deleted?[0m?[0m
+    main:                   ?[0m  ?[31m-?[0m?[0m resource "docker_container" "app1" {
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mattach?[0m?[0m            = false ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mcommand?[0m?[0m           = [
+    main:                             ?[31m-?[0m ?[0m"apache2-foreground",
+    main:                           ] ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mcpu_shares?[0m?[0m        = 0 ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mentrypoint?[0m?[0m        = [
+    main:                             ?[31m-?[0m ?[0m"docker-php-entrypoint",
+    main:                           ] ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0menv?[0m?[0m               = [
+    main:                             ?[31m-?[0m ?[0m"APP_VARIABLE=@sleepychild",
+    main:                           ] ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mgateway?[0m?[0m           = "172.17.0.1" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mhostname?[0m?[0m          = "f021866880b0" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mid?[0m?[0m                = "f021866880b0ae74be83e7bfc88b65ed10f5a174bb362ef68c5c66324136e0d5" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mimage?[0m?[0m             = "sha256:aab268e17775bf36740936f30a2ee6661e3cbde54f5a646d2d0e14136b802f7b" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0minit?[0m?[0m              = false ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mip_address?[0m?[0m        = "172.17.0.2" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mip_prefix_length?[0m?[0m  = 16 ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mipc_mode?[0m?[0m          = "private" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mlog_driver?[0m?[0m        = "json-file" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mlogs?[0m?[0m              = false ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mmax_retry_count?[0m?[0m   = 0 ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mmemory?[0m?[0m            = 0 ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mmemory_swap?[0m?[0m       = 0 ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mmust_run?[0m?[0m          = true ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mname?[0m?[0m              = "app1" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mnetwork_data?[0m?[0m      = [
+    main:                             ?[31m-?[0m ?[0m{
+    main:                                 ?[31m-?[0m ?[0mgateway                   = "172.17.0.1"
+    main:                                 ?[31m-?[0m ?[0mglobal_ipv6_address       = ""
+    main:                                 ?[31m-?[0m ?[0mglobal_ipv6_prefix_length = 0
+    main:                                 ?[31m-?[0m ?[0mip_address                = "172.17.0.2"
+    main:                                 ?[31m-?[0m ?[0mip_prefix_length          = 16
+    main:                                 ?[31m-?[0m ?[0mipv6_gateway              = ""
+    main:                                 ?[31m-?[0m ?[0mnetwork_name              = "bridge"
+    main:                               },
+    main:                           ] ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mnetwork_mode?[0m?[0m      = "default" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mprivileged?[0m?[0m        = false ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mpublish_all_ports?[0m?[0m = false ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mread_only?[0m?[0m         = false ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mremove_volumes?[0m?[0m    = true ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mrestart?[0m?[0m           = "no" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mrm?[0m?[0m                = false ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0msecurity_opts?[0m?[0m     = [] ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mshm_size?[0m?[0m          = 64 ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mstart?[0m?[0m             = true ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mstdin_open?[0m?[0m        = false ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mtty?[0m?[0m               = false ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                         ?[31m-?[0m ?[0m?[1m?[0mworking_dir?[0m?[0m       = "/var/www/html" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main: 
+    main:                         ?[31m-?[0m ?[0mports {
+    main:                             ?[31m-?[0m ?[0m?[1m?[0mexternal?[0m?[0m = 8080 ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                             ?[31m-?[0m ?[0m?[1m?[0minternal?[0m?[0m = 80 ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                             ?[31m-?[0m ?[0m?[1m?[0mip?[0m?[0m       = "0.0.0.0" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                             ?[31m-?[0m ?[0m?[1m?[0mprotocol?[0m?[0m = "tcp" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                           }
+    main: 
+    main:                         ?[31m-?[0m ?[0mvolumes {
+    main:                             ?[31m-?[0m ?[0m?[1m?[0mcontainer_path?[0m?[0m = "/var/www/html" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                             ?[31m-?[0m ?[0m?[1m?[0mhost_path?[0m?[0m      = "/sync/tf/app/project/app1/image/app/" ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                             ?[31m-?[0m ?[0m?[1m?[0mread_only?[0m?[0m      = true ?[90m->?[0m ?[0m?[90mnull?[0m?[0m
+    main:                           }
+    main:                       }
+    main: 
+    main:                   Unless you have made equivalent changes to your configuration, or ignored the
+    main:                   relevant attributes using ignore_changes, the following plan may include
+    main:                   actions to undo or respond to these changes.
+    main:                   ?[90m
+    main:                   ─────────────────────────────────────────────────────────────────────────────?[0m
+    main: 
+    main:                   Terraform used the selected providers to generate the following execution
+    main:                   plan. Resource actions are indicated with the following symbols:
+    main:                     ?[32m+?[0m create
+    main:                   ?[0m
+    main:                   Terraform will perform the following actions:
+    main: 
+    main:                   ?[1m  # docker_container.app1?[0m will be created?[0m?[0m
+    main:                   ?[0m  ?[32m+?[0m?[0m resource "docker_container" "app1" {
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mattach?[0m?[0m           = false
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mbridge?[0m?[0m           = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mcommand?[0m?[0m          = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mcontainer_logs?[0m?[0m   = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mentrypoint?[0m?[0m       = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0menv?[0m?[0m              = [
+    main:                             ?[32m+?[0m ?[0m"APP_VARIABLE=@sleepychild",
+    main:                           ]
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mexit_code?[0m?[0m        = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mgateway?[0m?[0m          = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mhostname?[0m?[0m         = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mid?[0m?[0m               = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mimage?[0m?[0m            = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0minit?[0m?[0m             = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mip_address?[0m?[0m       = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mip_prefix_length?[0m?[0m = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mipc_mode?[0m?[0m         = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mlog_driver?[0m?[0m       = "json-file"
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mlogs?[0m?[0m             = false
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mmust_run?[0m?[0m         = true
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mname?[0m?[0m             = "app1"
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mnetwork_data?[0m?[0m     = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mread_only?[0m?[0m        = false
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mremove_volumes?[0m?[0m   = true
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mrestart?[0m?[0m          = "no"
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mrm?[0m?[0m               = false
+    main:                         ?[32m+?[0m ?[0m?[1m?[0msecurity_opts?[0m?[0m    = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mshm_size?[0m?[0m         = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mstart?[0m?[0m            = true
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mstdin_open?[0m?[0m       = false
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mtty?[0m?[0m              = false
+    main: 
+    main:                         ?[32m+?[0m ?[0mhealthcheck {
+    main:                             ?[32m+?[0m ?[0m?[1m?[0minterval?[0m?[0m     = (known after apply)
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mretries?[0m?[0m      = (known after apply)
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mstart_period?[0m?[0m = (known after apply)
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mtest?[0m?[0m         = (known after apply)
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mtimeout?[0m?[0m      = (known after apply)
+    main:                           }
+    main: 
+    main:                         ?[32m+?[0m ?[0mlabels {
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mlabel?[0m?[0m = (known after apply)
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mvalue?[0m?[0m = (known after apply)
+    main:                           }
+    main: 
+    main:                         ?[32m+?[0m ?[0mports {
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mexternal?[0m?[0m = 8080
+    main:                             ?[32m+?[0m ?[0m?[1m?[0minternal?[0m?[0m = 80
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mip?[0m?[0m       = "0.0.0.0"
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mprotocol?[0m?[0m = "tcp"
+    main:                           }
+    main: 
+    main:                         ?[32m+?[0m ?[0mvolumes {
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mcontainer_path?[0m?[0m = "/var/www/html"
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mhost_path?[0m?[0m      = "/sync/tf/app/project/app1/image/app/"
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mread_only?[0m?[0m      = true
+    main:                           }
+    main:                       }
+    main: 
+    main:                   ?[1m  # docker_image.app1?[0m will be created?[0m?[0m
+    main:                   ?[0m  ?[32m+?[0m?[0m resource "docker_image" "app1" {
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mid?[0m?[0m          = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mlatest?[0m?[0m      = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mname?[0m?[0m        = "app1"
+    main:                         ?[32m+?[0m ?[0m?[1m?[0moutput?[0m?[0m      = (known after apply)
+    main:                         ?[32m+?[0m ?[0m?[1m?[0mrepo_digest?[0m?[0m = (known after apply)
+    main: 
+    main:                         ?[32m+?[0m ?[0mbuild {
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mdockerfile?[0m?[0m = "Dockerfile"
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mpath?[0m?[0m       = "/sync/tf/app/project/app1/image/"
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mremove?[0m?[0m     = true
+    main:                             ?[32m+?[0m ?[0m?[1m?[0mtag?[0m?[0m        = []
+    main:                           }
+    main:                       }
+    main: 
+    main:                   ?[0m?[1mPlan:?[0m 2 to add, 0 to change, 0 to destroy.
+    main:                   ?[0m?[90m
+    main:                   ─────────────────────────────────────────────────────────────────────────────?[0m
+    main: 
+    main:                   Saved the plan to: main.plan
+    main: 
+    main:                   To perform exactly these actions, run the following command to apply:
+    main:                       terraform apply "main.plan"
+    main:                   ?[0m?[1mdocker_image.app1: Creating...?[0m?[0m
+    main:                   ?[0m?[1mdocker_image.app1: Still creating... [10s elapsed]?[0m?[0m
+    main:                   ?[0m?[1mdocker_image.app1: Still creating... [20s elapsed]?[0m?[0m
+    main:                   ?[0m?[1mdocker_image.app1: Still creating... [30s elapsed]?[0m?[0m
+    main:                   ?[0m?[1mdocker_image.app1: Still creating... [40s elapsed]?[0m?[0m
+    main:                   ?[0m?[1mdocker_image.app1: Creation complete after 48s [id=sha256:ea1f85232e9604ef52860539362f20272b1310b529fff8c0b6cc1d668963c9e6app1]?[0m
+    main:                   ?[0m?[1mdocker_container.app1: Creating...?[0m?[0m
+    main:                   ?[0m?[1mdocker_container.app1: Creation complete after 2s [id=dff18cac0fcf1282ba5e0859393ac8dc540370cb7261ba26db73c8a1c425fc65]?[0m
+    main:                   ?[0m?[1m?[32m
+    main:                   Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+    main:                   ?[0m/root
+    main: ----------
+    main:           ID: check
+    main:     Function: cmd.run
+    main:         Name: curl "http://localhost:8080"
+    main:       Result: True
+    main:      Comment: Attempt 1: Returned a result of "False", with the following comment: "Command "curl "http://localhost:8080"" run"
+    main:               Command "curl "http://localhost:8080"" run
+    main:      Started: 00:28:27.753966
+    main:     Duration: 11374.746 ms
+    main:      Changes:
+    main:               ----------
+    main:               pid:
+    main:                   24562
+    main:               retcode:
+    main:                   0
+    main:               stderr:
+    main:                     % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+    main:                                                    Dload  Upload   Total   Spent    Left  Speed
+    main: 
+    main:                     0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+    main:                   100    54  100    54    0     0  18000      0 --:--:-- --:--:-- --:--:-- 18000
+    main:               stdout:
+    main:                   Hello, @sleepychild!
+    main:                   Congratulations! You made it! :)
+    main: 
+    main: Summary for main
+    main: ------------
+    main: Succeeded: 2 (changed=2)
+    main: Failed:    0
+    main: ------------
+    main: Total states run:     2
+    main: Total run time:  65.610 s
