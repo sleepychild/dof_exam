@@ -30,7 +30,7 @@ resource "null_resource" "files" {
 resource "docker_image" "app1" {
   name = "app1"
   build {
-    path = "/sync/tf/app/project/app1/image/."
+    path = "/sync/tf/app/project/app1/image/"
   }
 }
 

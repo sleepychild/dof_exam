@@ -1,0 +1,45 @@
+main:
+----------
+          ID: concourse
+    Function: cmd.script
+        Name: Run Concourse
+      Result: True
+     Comment: Command 'Run Concourse' run
+     Started: 08:15:14.833285
+    Duration: 11717.591 ms
+     Changes:   
+              ----------
+              pid:
+                  63655
+              retcode:
+                  0
+              stderr:
+                    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                                   Dload  Upload   Total   Spent    Left  Speed
+                  
+                    0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+                  100  1130  100  1130    0     0   3791      0 --:--:-- --:--:-- --:--:--  3791
+                  Starting concourse_concourse-db_1 ... 
+                  Starting concourse_concourse-db_1 ... done
+                  Recreating concourse_concourse_1  ... 
+                  Recreating concourse_concourse_1  ... done
+                    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                                   Dload  Upload   Total   Spent    Left  Speed
+                  
+                    0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+                    0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+                  curl: (56) Recv failure: Connection reset by peer
+                  chmod: cannot access 'fly': No such file or directory
+              stdout:
+                  ~/concourse ~
+                  ~
+                  /usr/local/bin ~
+                  ~
+
+Summary for main
+------------
+Succeeded: 1 (changed=1)
+Failed:    0
+------------
+Total states run:     1
+Total run time:  11.718 s

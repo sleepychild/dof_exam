@@ -1,0 +1,8 @@
+ERROR: Minions returned with non-zero exit code
+main:
+    Data failed to compile:
+----------
+    Rendering SLS 'base:10_concourse' failed: while constructing a mapping
+  in "<unicode string>", line 1, column 1
+found conflicting ID 'concourse'
+  in "<unicode string>", line 14, column 1

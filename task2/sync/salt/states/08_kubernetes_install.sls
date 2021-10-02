@@ -19,3 +19,7 @@ install.kubernetes:
 setup.kubernetes:
   cmd.run:
     - name: 'sudo sysctl --system'
+
+# kubectl.autocomplete:
+#   cmd.run:
+#     - name: echo "source <(kubectl completion bash)" >> ~/.bashrc

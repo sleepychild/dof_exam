@@ -1,0 +1,55 @@
+main:
+----------
+          ID: concourse
+    Function: cmd.script
+        Name: Run Concourse
+      Result: True
+     Comment: Command 'Run Concourse' run
+     Started: 07:58:45.140968
+    Duration: 451402.721 ms
+     Changes:   
+              ----------
+              pid:
+                  41233
+              retcode:
+                  0
+              stderr:
+                    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                                   Dload  Upload   Total   Spent    Left  Speed
+                  
+                    0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+                    0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+                  100  1130  100  1130    0     0   4109      0 --:--:-- --:--:-- --:--:--  4094
+                  Creating network "concourse_default" with the default driver
+                  Pulling concourse-db (postgres:)...
+                  Pulling concourse (concourse/concourse:)...
+                  Creating concourse_concourse-db_1 ... 
+                  Creating concourse_concourse-db_1 ... done
+                  Creating concourse_concourse_1    ... 
+                  Creating concourse_concourse_1    ... done
+                    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                                   Dload  Upload   Total   Spent    Left  Speed
+                  
+                    0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+                    0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+                  curl: (56) Recv failure: Connection reset by peer
+                  chmod: cannot access 'fly': No such file or directory
+              stdout:
+                  ~/concourse ~
+                  latest: Pulling from library/postgres
+                  Digest: sha256:90c1ddddb38152f7260014bc4d3d10209cebbd5e25346cea07b00efd8e36028e
+                  Status: Downloaded newer image for postgres:latest
+                  latest: Pulling from concourse/concourse
+                  Digest: sha256:2dff718ab502fa1fb19af1d94e78ba990b69ea40fc60879427e2dec4d1ef8d59
+                  Status: Downloaded newer image for concourse/concourse:latest
+                  ~
+                  /usr/local/bin ~
+                  ~
+
+Summary for main
+------------
+Succeeded: 1 (changed=1)
+Failed:    0
+------------
+Total states run:     1
+Total run time: 451.403 s

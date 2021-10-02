@@ -1,0 +1,43 @@
+main:
+----------
+          ID: concourse
+    Function: cmd.script
+        Name: Run Concourse
+      Result: True
+     Comment: Command 'Run Concourse' run
+     Started: 08:18:25.152122
+    Duration: 2645.798 ms
+     Changes:   
+              ----------
+              pid:
+                  67346
+              retcode:
+                  0
+              stderr:
+                    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                                   Dload  Upload   Total   Spent    Left  Speed
+                  
+                    0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+                  100  1130  100  1130    0     0   5485      0 --:--:-- --:--:-- --:--:--  5485
+                  concourse_concourse-db_1 is up-to-date
+                  concourse_concourse_1 is up-to-date
+              stdout:
+                  ~/concourse ~
+                  ~
+----------
+          ID: fly
+    Function: cmd.script
+        Name: Run Concourse
+      Result: True
+     Comment: All files in creates exist
+     Started: 08:18:27.798172
+    Duration: 4.449 ms
+     Changes:   
+
+Summary for main
+------------
+Succeeded: 2 (changed=1)
+Failed:    0
+------------
+Total states run:     2
+Total run time:   2.650 s
